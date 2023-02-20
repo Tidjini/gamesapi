@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 class Game(models.Model):
@@ -9,6 +8,7 @@ class Game(models.Model):
     release_date = models.DateField()
     category = models.CharField(max_length=200)
     played = models.BooleanField(default=False)
+    slug = models.CharField(max_length=250)
 
     class Meta:
         ordering = 'name', 
