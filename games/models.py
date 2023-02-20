@@ -8,7 +8,7 @@ class Game(models.Model):
     name = models.CharField(max_length=200)
     release_date = models.DateField()
     category = models.CharField(max_length=200)
-    played = models.BooleanField()
+    played = models.BooleanField(default=False)
 
     class Meta:
         ordering = 'name', 
